@@ -130,3 +130,6 @@ dmypy.json
 
 # vscode config
 .vscode
+
+# result folders
+20*/
