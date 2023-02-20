@@ -8,7 +8,7 @@ dataset_groups:
 # type: kinetic-spectrum
 dataset:
   tas_rcg_dcm:
-    megacomplex: [artifact_rcg_dcm,complex_rcg_dcm]
+    megacomplex: [artifact_rcg_dcm, complex_rcg_dcm]
     # megacomplex_scale: [scalem.1]
     initial_concentration: input_rcg
     irf: irf_rcg
@@ -73,17 +73,17 @@ dataset:
 
 megacomplex:
   complex_rcg_dcm:
-    k_matrix: [km_rcg_common,kmrcg,kmg]
+    k_matrix: [km_rcg_common, kmrcg, kmg]
   artifact_rcg_dcm:
     type: coherent-artifact
     order: 3
   complex_gcrcg_dcm:
-    k_matrix: [km_gcrcg_common,km_gcrcg_rcg,km_gcrcg_g]
+    k_matrix: [km_gcrcg_common, km_gcrcg_rcg, km_gcrcg_g]
   artifact_gcrcg_dcm:
     type: coherent-artifact
     order: 3
   complex_rcgcr_dcm:
-    k_matrix: [km_rcgcr_common,km_rcgcr_rcg,km_rcgcr_g]
+    k_matrix: [km_rcgcr_common, km_rcgcr_rcg, km_rcgcr_g]
   artifact_rcgcr_dcm:
     type: coherent-artifact
     order: 3
@@ -148,8 +148,8 @@ megacomplex:
     target: rcgcr_g
     type: clp-guide
 
-# how can i now express that the first 20 lines  
-# are common for complexes 1-5, and the next 11 lines  
+# how can i now express that the first 20 lines
+# are common for complexes 1-5, and the next 11 lines
 # are common for complexes 1-4? how can i specify in chunks?
 # note that earlier definition will override later definition
 k_matrix:
@@ -214,10 +214,12 @@ initial_concentration:
     parameters: [inputs1.s1, inputs1.0, inputs1.0, inputs1.0, inputs1.g_rcg]
   input_gcrcg:
     compartments: [gcrcg_r1, gcrcg_r2, gcrcg_r3, gcrcg_r4, gcrcg_g, gcrcg_s6]
-    parameters: [inputs1.s1, inputs1.0, inputs1.0, inputs1.0, inputs1.g_gcrcg, inputs1.0]
+    parameters:
+      [inputs1.s1, inputs1.0, inputs1.0, inputs1.0, inputs1.g_gcrcg, inputs1.0]
   input_rcgcr:
     compartments: [rcgcr_r1, rcgcr_r2, rcgcr_r3, rcgcr_r4, rcgcr_g, rcgcr_s6]
-    parameters: [inputs1.s1, inputs1.0, inputs1.0, inputs1.0, inputs1.g_rcgcr, inputs1.0]
+    parameters:
+      [inputs1.s1, inputs1.0, inputs1.0, inputs1.0, inputs1.g_rcgcr, inputs1.0]
     # exclude_from_normalize: [s7]
 # 6 needed ! why is it called compartment here and source with equal_area? does this mean that s2=s1*rel.r1 ?
 # clp_relations:
@@ -231,34 +233,34 @@ initial_concentration:
 #     interval: [[0, 1000]]
 
 # spectral_constraints:
-  # - type: zero
-  #   compartment: s1
-  #   interval:
-  #     - [700,1000]
-  # - type: zero
-  #   compartment: s2
-  #   interval:
-  #     - [1, 687]
-  # - type: zero
-  #   compartment: s3
-  #   interval:
-  #     - [1, 687]
-  # - type: zero
-  #   compartment: s4
-  #   interval:
-  #     - [1, 687]
-  # - type: zero
-  #   compartment: g
-  #   interval:
-  #     - [1, 687]
-  # # - type: zero
-  # #   compartment: s6
-  # #   interval:
-  # #     - [1, 687]
-  # - type: zero
-  #   compartment: artifact
-  #   interval:
-  #     - [595,1000]
+# - type: zero
+#   compartment: s1
+#   interval:
+#     - [700,1000]
+# - type: zero
+#   compartment: s2
+#   interval:
+#     - [1, 687]
+# - type: zero
+#   compartment: s3
+#   interval:
+#     - [1, 687]
+# - type: zero
+#   compartment: s4
+#   interval:
+#     - [1, 687]
+# - type: zero
+#   compartment: g
+#   interval:
+#     - [1, 687]
+# # - type: zero
+# #   compartment: s6
+# #   interval:
+# #     - [1, 687]
+# - type: zero
+#   compartment: artifact
+#   interval:
+#     - [595,1000]
 
 # it is implicitly normalized, i.e. divided by sum of irfscale parameters
 irf:
@@ -268,7 +270,7 @@ irf:
     width: irf.width1
     # scale: [irf.scale1,irf.scale4]
     dispersion_center: irf.common_dispcenter
-    center_dispersion_coefficients: [irf.data1_disp1,irf.data1_disp2]
+    center_dispersion_coefficients: [irf.data1_disp1, irf.data1_disp2]
     model_dispersion_with_wavenumber: true
   irf_gcrcg:
     type: spectral-gaussian
@@ -276,7 +278,7 @@ irf:
     width: irf.width2
     # scale: [irf.scale1,irf.scale4]
     dispersion_center: irf.common_dispcenter
-    center_dispersion_coefficients: [irf.data1_disp1,irf.data1_disp2]
+    center_dispersion_coefficients: [irf.data1_disp1, irf.data1_disp2]
     model_dispersion_with_wavenumber: true
   irf_rcgcr:
     type: spectral-gaussian
@@ -284,16 +286,33 @@ irf:
     width: irf.width7
     # scale: [irf.scale1,irf.scale4]
     dispersion_center: irf.common_dispcenter
-    center_dispersion_coefficients: [irf.data1_disp1,irf.data1_disp2]
+    center_dispersion_coefficients: [irf.data1_disp1, irf.data1_disp2]
     model_dispersion_with_wavenumber: true
 weights:
-  - datasets: [tas_rcg_dcm,tas_gcrcg_dcm,tas_rcgcr_dcm]
+  - datasets: [tas_rcg_dcm, tas_gcrcg_dcm, tas_rcgcr_dcm]
     global_interval: [520, 535]
     value: 0.4
-  - datasets: [tas_rcg_dcm,tas_gcrcg_dcm,tas_rcgcr_dcm]
-    global_interval: [1,420]
+  - datasets: [tas_rcg_dcm, tas_gcrcg_dcm, tas_rcgcr_dcm]
+    global_interval: [1, 420]
     value: 0.2
-  - datasets: [guide_rcg_r1,guide_rcg_r2,guide_rcg_r3,guide_rcg_r4,guide_rcg_g,guide_gcrcg_r1,guide_gcrcg_r2,guide_gcrcg_r3,guide_gcrcg_r4,guide_gcrcg_g,guide_rcgcr_r1,guide_rcgcr_r2,guide_rcgcr_r3,guide_rcgcr_r4,guide_rcgcr_g]
+  - datasets:
+      [
+        guide_rcg_r1,
+        guide_rcg_r2,
+        guide_rcg_r3,
+        guide_rcg_r4,
+        guide_rcg_g,
+        guide_gcrcg_r1,
+        guide_gcrcg_r2,
+        guide_gcrcg_r3,
+        guide_gcrcg_r4,
+        guide_gcrcg_g,
+        guide_rcgcr_r1,
+        guide_rcgcr_r2,
+        guide_rcgcr_r3,
+        guide_rcgcr_r4,
+        guide_rcgcr_g,
+      ]
     # global_interval: [1, 999]
     # model_interval: [1, 999]
     value: 0.001

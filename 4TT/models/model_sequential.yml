@@ -4,8 +4,8 @@ initial_concentration:
   j1:
     # compartments: [S2, S1, T1, S2rel, T1hot]
     # parameters: [j.1, j.0, j.0, j.0, j.0]
-    compartments: [S2, S1, T1,  T1hot]
-    parameters: [j.1, j.0, j.0,  j.0]
+    compartments: [S2, S1, T1, T1hot]
+    parameters: [j.1, j.0, j.0, j.0]
 
 k_matrix:
   k1:
@@ -21,27 +21,9 @@ k_matrix:
 megacomplex:
   doas:
     type: damped-oscillation
-    labels:
-      [
-        osc1,
-        osc2,
-        osc3,
-        osc4,
-      ]
-    frequencies:
-      [
-        osc.freq.1,
-        osc.freq.2,
-        osc.freq.3,
-        osc.freq.4,
-      ]
-    rates:
-      [
-        osc.rates.1,
-        osc.rates.2,
-        osc.rates.3,
-        osc.rates.4,
-      ]
+    labels: [osc1, osc2, osc3, osc4]
+    frequencies: [osc.freq.1, osc.freq.2, osc.freq.3, osc.freq.4]
+    rates: [osc.rates.1, osc.rates.2, osc.rates.3, osc.rates.4]
   decay:
     type: decay
     k_matrix: [k1]
