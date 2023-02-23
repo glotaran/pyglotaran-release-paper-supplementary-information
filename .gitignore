@@ -141,3 +141,6 @@ guide/
 
 # Generated PDFs and tex source
 pdfs
+
+# project files
+*.gta
