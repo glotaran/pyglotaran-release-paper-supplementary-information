@@ -1,5 +1,7 @@
 # pyglotaran-release-paper-supplementary-information
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7658982.svg)](https://doi.org/10.5281/zenodo.7658982)
+
 Supplementary Information (SI) to the pyglotaran release paper
 
 ## Getting started with this repository
