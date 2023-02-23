@@ -131,6 +131,9 @@ dmypy.json
 # vscode config
 .vscode
 
+# project data folder populated by data_import
+rc/data
+
 # result folders
 20*/
 results/
