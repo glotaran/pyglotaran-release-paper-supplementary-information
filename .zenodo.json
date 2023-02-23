@@ -29,6 +29,7 @@
     "python"
   ],
   "access_right": "open",
-  "license": "LGPL-3.0",
-  "upload_type": "software"
+  "license": "MIT",
+  "upload_type": "publication",
+  "publication_type": "softwaredocumentation"
 }
