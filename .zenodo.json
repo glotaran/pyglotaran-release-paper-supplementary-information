@@ -2,22 +2,22 @@
   "title": "Supplementary Information (SI) to the pyglotaran release paper",
   "creators": [
     {
-      "name": "J\u00f6rn Wei\u00dfenborn",
-      "affiliation": "Vrije Universiteit Amsterdam"
+      "name": "Ivo H.M. van Stokkum",
+      "affiliation": "Vrije Universiteit Amsterdam",
+      "orcid": "0000-0002-6143-2021"
     },
     {
-      "name": "Joris Snellenburg",
-      "affiliation": "Vrije Universiteit Amsterdam",
-      "orcid": "0000-0002-1428-0221"
+      "name": "J\u00f6rn Wei\u00dfenborn",
+      "affiliation": "Vrije Universiteit Amsterdam"
     },
     {
       "name": "Sebastian Weigand",
       "affiliation": "Technical University Berlin"
     },
     {
-      "name": "Ivo H.M. van Stokkum",
+      "name": "Joris Snellenburg",
       "affiliation": "Vrije Universiteit Amsterdam",
-      "orcid": "0000-0002-6143-2021"
+      "orcid": "0000-0002-1428-0221"
     }
   ],
   "keywords": [
