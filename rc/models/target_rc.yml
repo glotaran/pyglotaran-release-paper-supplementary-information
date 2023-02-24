@@ -67,3 +67,13 @@ weights:
   - datasets: [dataset1]
     global_interval: [1, 420]
     value: 0.2
+
+clp_relations:
+  - source: r2
+    target: r1
+    parameter: rel.r1
+    interval: [[520, 538]]
+  - source: r3
+    target: r1
+    parameter: rel.r2
+    interval: [[750, 860]]
