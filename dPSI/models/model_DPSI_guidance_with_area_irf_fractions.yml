@@ -76,10 +76,6 @@ megacomplex:
   #   target: s1
   #   type: clp-guide
 
-# how can i now express that the first 20 lines
-# are common for complexes 1-5, and the next 11 lines
-# are common for complexes 1-4? how can i specify in chunks?
-# note that earlier definition will override later definition
 k_matrix:
   km1common:
     matrix:
