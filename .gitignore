@@ -134,6 +134,7 @@ dmypy.json
 # project data folder populated by data_import
 rc/data
 4TT/data
+dPSI/data
 
 # result folders
 20*/
