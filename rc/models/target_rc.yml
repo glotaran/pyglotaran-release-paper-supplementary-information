@@ -3,14 +3,11 @@ dataset_groups:
   default:
     residual_function: variable_projection
     link_clp: True
-    # residual_function: non_negative_least_squares
 
-# type: kinetic-spectrum
 dataset:
   # Kcr_rcra:
   rc:
     megacomplex: [artifact1, complex1]
-    # megacomplex_scale: [scalem.1]
     initial_concentration: input1
     irf: irf1
     scale: scale.1
@@ -22,10 +19,6 @@ megacomplex:
     type: coherent-artifact
     order: 3
 
-# how can i now express that the first 20 lines
-# are common for complexes 1-5, and the next 11 lines
-# are common for complexes 1-4? how can i specify in chunks?
-# note that earlier definition will override later definition
 k_matrix:
   km1common:
     matrix:
