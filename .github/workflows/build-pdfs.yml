@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: 🚀 Compile and upload master thesis
+    name: 🚀 Compile PDFs ${{ matrix.case_study }}
     runs-on: ubuntu-latest
     defaults:
       run:
