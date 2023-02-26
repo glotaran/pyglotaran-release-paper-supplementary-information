@@ -29,8 +29,9 @@ def convert_notebook(notebook_path: Path) -> None:
     for resource_name, resource in resources["outputs"].items():
         (OUTPUT_DIR / resource_name).write_bytes(resource)
 
-    for image_path in notebook_path.parent.rglob("*.png"):
-        copyfile(image_path, OUTPUT_DIR / image_path.relative_to(notebook_path.parent))
+    for extension in ("png", "jpg"):
+        for image_path in notebook_path.parent.rglob(f"*.{extension}"):
+            copyfile(image_path, OUTPUT_DIR / image_path.relative_to(notebook_path.parent))
 
 
 def compile_pdfs():
