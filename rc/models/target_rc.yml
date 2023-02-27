@@ -5,7 +5,6 @@ dataset_groups:
     link_clp: True
 
 dataset:
-  # Kcr_rcra:
   rc:
     megacomplex: [artifact1, complex1]
     initial_concentration: input1
@@ -44,7 +43,6 @@ irf:
     # width: irf.rc.dcm.width
     width: irf.width1
     # scale: [irf.scale1,irf.scale4]
-    # dispersion_center: irf.common_disp_center
     dispersion_center: irf.common_dispcenter
     # center_dispersion_coefficients: [irf.rc.dcm.disp1, irf.rc.dcm.disp2]
     # center_dispersion_coefficients: [rc.dcm.irf.disp1, rc.dcm.irf.disp2]
@@ -52,11 +50,9 @@ irf:
     model_dispersion_with_wavenumber: true
 
 weights:
-  # - datasets: [Kcr_rcra]
   - datasets: [dataset1]
     global_interval: [520, 535]
     value: 0.4
-  # - datasets: [Kcr_rcra]
   - datasets: [dataset1]
     global_interval: [1, 420]
     value: 0.2
