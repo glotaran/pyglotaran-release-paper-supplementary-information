@@ -32,9 +32,6 @@ megacomplex:
   decay:
     type: decay
     k_matrix: [k1]
-  #  baseline:
-  #    type: baseline
-  #    dimension: time
   artifact:
     type: coherent-artifact
     order: 3
