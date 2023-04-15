@@ -10,7 +10,7 @@ If you already have a Python 3.10 (virtual environment) on your computer, or you
 
 ### 1. Setting up Python with Anaconda
 
-Download Anaconda from it's [official website](https://www.anaconda.com/).
+Download Anaconda from its [official website](https://www.anaconda.com/).
 
 Pick the installer that's appropriate for your operating system.
 It is assumed you install with default settings.
