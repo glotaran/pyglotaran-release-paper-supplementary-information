@@ -2,7 +2,18 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7658982.svg)](https://doi.org/10.5281/zenodo.7658982)
 
-Supplementary Information (SI) to the pyglotaran release paper
+Supplementary Information (SI) to the pyglotaran release paper (details below).
+
+## Publication details
+
+#### pyglotaran: a lego-like Python framework for global and target analysis of time resolved spectra
+
+Ivo H.M. van Stokkum<sup>a</sup>, Jörn Weißenborn<sup>a</sup>, Sebastian Weiganda<sup>a,b</sup>, Joris J. Snellenburg<sup>a</sup>
+
+<sub><sup>a</sup> Department of Physics and Astronomy and LaserLaB, Faculty of Science, Vrije Universiteit Amsterdam, De Boelelaan 1081, 1081 HV, Amsterdam, The Netherlands</sub><br>
+<sub><sup>b</sup> Fakultät II Institut für Festkörperphysik, Technische Universität Berlin</sub>
+
+<sub>DOI: [10.1007/s43630-023-00460-y](https://doi.org/10.1007/s43630-023-00460-y)</sub>
 
 ## Getting started with this repository
 
