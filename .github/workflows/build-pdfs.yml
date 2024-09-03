@@ -70,13 +70,13 @@ jobs:
     needs: build
     steps:
       - name: ⬇ Download pdf artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: pdfs
           path: pdfs
 
       - name: ⬇ Download notebooks artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: notebooks
           path: notebooks
